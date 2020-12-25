@@ -1,4 +1,4 @@
 # IsTakip
 /* 
-Bu bir Web Programlama Projesidir.
+Bu bir Web Programlama Projesidir..
 */
