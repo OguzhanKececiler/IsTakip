@@ -1,0 +1,59 @@
+﻿@model AppUserAddDto
+@{
+    ViewData["Title"] = "KayitOl";
+    Layout = "~/Views/Shared/_StandartLayout.cshtml";
+}
+
+<form asp-action="KayitOl" method="post" class="w-75 mt-3 mx-auto p-3 shadow">
+
+    <h4 class="text-center"> Kayıt Ol</h4>
+    <div class="form-group">
+        <label asp-for="Name">Adınız :</label>
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <input asp-for="Name" class="form-control" />
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Surname">Soyadını :</label>
+        <span asp-validation-for="Surname" class="text-danger"></span>
+        <input asp-for="Surname" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">Email :</label>
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <input asp-for="Email" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Password">Şifre :</label>
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <input type="password" asp-for="Password" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword">Onay Şifre :</label>
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        <input type="password" asp-for="ConfirmPassword" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Username">Kullanıcı Adı :</label>
+        <span asp-validation-for="Username" class="text-danger"></span>
+        <input asp-for="Username" class="form-control" /> @*her gordugun inputa bole yapmalısın*@
+
+    </div>
+    <div asp-validation-summary="ModelOnly" class="text-danger">
+
+    </div>  @*sadece modelimle alakalı hataları bana göster diyorum*@
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-warning btn-sm">Vazgeç</a>
+    <button type="submit" class="btn btn-info btn-sm">Kayıt Ol </button>
+
+</form>
+
+@section JavaScript{
+    <script src="~/lib/jqueryValidate/jquery.validate.min.js"></script>
+    <script src="~/lib/jqueryUnob/jquery.validate.unobtrusive.min.js"></script>
+}

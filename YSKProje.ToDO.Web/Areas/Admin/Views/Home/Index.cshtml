@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row mt-3">
+    <div class="col-md-6">
+        <div class="card text-white bg-primary text-center mb-3">
+            <div class="card-body">
+                <h4 class="card-title">Okunmamış Bildirim Sayısı</h4>
+                @if (ViewBag.OkunmamisBildirimSayisi > 0)
+                {
+                    <p class="card-text display-4">@ViewBag.OkunmamisBildirimSayisi </p>
+                    <p class="text-center">
+                        <a asp-action="Index" asp-controller="Bildirim" class="btn btn-light btn-sm">  <i class="fas fa-chevron-circle-right"> </i>İncele</a>
+                    </p>
+                }
+                else
+                {
+                    <p class="card-text lead">Okunmamış bildiriminiz yoktur. </p>
+
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card text-white bg-primary text-center mb-3">
+            <div class="card-body">
+                <h4 class="card-title">Atanmayı Bekleyen Görev Sayisi</h4>
+                @if (ViewBag.AtanmayiBekleyenGorevSayisi > 0)
+                {
+                    <p class="card-text display-4">@ViewBag.AtanmayiBekleyenGorevSayisi </p>
+                    <p class="text-center">
+                        <a asp-action="Index" asp-controller="IsEmri" class="btn btn-light btn-sm">  <i class="fas fa-chevron-circle-right"> </i>İncele</a>
+                    </p>
+                }
+                else
+                {
+                    <p class="card-text lead">Bütün personellerimizde çalışmakta yada herhangi bir görev bulunmamaktadır. </p>
+
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card text-white bg-primary text-center mb-3">
+            <div class="card-body">
+                <h4 class="card-title">Tamamlanmış Görev Sayısı</h4>
+                @if (ViewBag.TamamlanmisGorevSayisi > 0)
+                {
+                    <p class="card-text display-4">@ViewBag.TamamlanmisGorevSayisi </p>
+                    <p class="text-center">
+                        <a asp-action="Index" asp-controller="IsEmri" class="btn btn-light btn-sm">  <i class="fas fa-chevron-circle-right"> </i>İncele</a>
+                    </p>
+                }
+                else
+                {
+                    <p class="card-text lead">Herhangi bir tamamlanmış göreviniz bulunmamaktadır. </p>
+
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card text-white bg-primary text-center mb-3">
+            <div class="card-body">
+                <h4 class="card-title">Yazılan Rapor Sayısı</h4>
+                @if (ViewBag.ToplamRaporSayisi > 0)
+                {
+                    <p class="card-text display-4">@ViewBag.ToplamRaporSayisi </p>
+                    <p class="text-center">
+                        <a asp-action="Index" asp-controller="IsEmri" class="btn btn-light btn-sm">  <i class="fas fa-chevron-circle-right"> </i>İncele</a>
+                    </p>
+                }
+                else
+                {
+                    <p class="card-text lead">Yazılan rapor yok. </p>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
